@@ -96,6 +96,48 @@ useEffect(() => {
          
         </MapContainer>
       </div>
+      <div>
+      <MapContainer center={position} zoom={7} scrollWheelZoom={true} className="leaflet-container">
+          <TileLayer
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
+
+
+
+          {data.map((network) => {
+            
+            return (
+                //Marker positions are dynamic and according to the data location of latitude and longitude.
+              <Marker
+                key={network.id}
+                position={[
+                  network.location.latitude,
+                  network.location.longitude,
+                ]}
+              >
+                    
+                <Popup position={[
+                    //Popup position has to have the same position of the market.
+                  network.location.latitude,
+                  network.location.longitude,
+                ]}>
+
+                
+                    <div>
+                    {/* Message when the popup is clicked */}
+                        <h3>{network.name}</h3>
+                    </div>
+
+                </Popup>
+              </Marker>
+            );
+          })}
+              <Marker position={[41.14961, -8.61099]}></Marker>
+
+         
+        </MapContainer>
+      </div>
       
      
       {/* {data.map((oneNetwork) => {
