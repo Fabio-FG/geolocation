@@ -7,18 +7,24 @@ function HomePage() {
   //useState for the data - networks and stations
   const [data, setData] = useState([]);
 
-  //initializing the map with leaflet
+  //useState for the networks
+  const [network, setNetwork] = useState([]); 
+
+
+
 
   //start position of the map - lisbon coordinates
   const position = [38.736946, -9.142685];
+
+
 
   //fetch data from the api -> http://api.citybik.es/v2/ using axios.
 
   const getGeoData = async () => {
     try {
-      const response = await axios("http://api.citybik.es/v2/networks");
+      const response = await axios("http://api.citybik.es/v2/networks")
       setData(response.data.networks);
-      console.log("the data:", response.data.networks[5].name);
+      console.log("the data:", response.data);
     } catch (error) {
       console.log(error, "error");
     }
@@ -29,24 +35,72 @@ function HomePage() {
     getGeoData();
   }, []);
 
+
+  //make a request to the api for the network id and stations
+
+  const getStations = async (network_id) => {
+      try {
+          const response = await axios(`http://api.citybik.es/v2/networks/${network_id}`)
+          setNetwork(response.data);
+          console.log("the networks:", response.data)
+      } catch (error) {
+          console.log("error", error);
+      }
+  }
+
+useEffect(() => { 
+    getStations();
+}, [])
+
+
+
   return (
     <div>
-      <div className="leaflet-container">
-        <MapContainer center={position} zoom={13} scrollWheelZoom={true}>
+    <h1>Geolocation Bike App</h1>
+      <div>
+        <MapContainer center={position} zoom={7} scrollWheelZoom={true} className="leaflet-container">
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
-          <Marker position={position}>
+
+          {data.map((network) => {
             
-          </Marker>
+            return (
+                //Marker positions are dynamic and according to the data location of latitude and longitude.
+              <Marker
+                key={network.id}
+                position={[
+                  network.location.latitude,
+                  network.location.longitude,
+                ]}
+              >
+                    
+                <Popup position={[
+                    //Popup position has to have the same position of the market.
+                  network.location.latitude,
+                  network.location.longitude,
+                ]}>
+
+                
+                    <div>
+                    {/* Message when the popup is clicked */}
+                        <h3>{network.name}</h3>
+                    </div>
+
+                </Popup>
+              </Marker>
+            );
+          })}
+
+         
         </MapContainer>
       </div>
-      <h1>This is the front page</h1>
-      <div id="map"></div>
-      {data.map((oneNetwork) => {
+      
+     
+      {/* {data.map((oneNetwork) => {
         return <div key={oneNetwork.id}>{oneNetwork.location.country}</div>;
-      })}
+      })} */}
     </div>
   );
 }
