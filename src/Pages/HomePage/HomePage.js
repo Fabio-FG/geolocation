@@ -1,6 +1,5 @@
 import "./HomePage.css";
-import Networks from "../../Components/LayerOne/Networks";
-import Stations from "../../Components/LayerTwo/Stations";
+import Map from "../../Components/LayerOne/Map";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 
 
@@ -12,9 +11,9 @@ function HomePage() {
     <div>
     <h1 className="title">Bike App - Geolocation</h1>
     <h5 className="title">Fábio G.</h5>
-    <MapContainer center={position} zoom={7} scrollWheelZoom={true} maxZoom={10} className="leaflet-container" >
-      <Networks />
-      <Stations />
+    <MapContainer center={position} zoom={7} scrollWheelZoom={true} maxZoom={20} className="leaflet-container" >
+      <Map />
+      
     </MapContainer>
     </div>
   );
