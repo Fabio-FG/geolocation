@@ -10,8 +10,9 @@ function HomePage() {
   const position = [38.736946, -9.142685];
   return (
     <div>
-    <h1 className="title">Bike App</h1>
-    <MapContainer center={position} zoom={7} scrollWheelZoom={true} className="leaflet-container">
+    <h1 className="title">Bike App - Geolocation</h1>
+    <h5 className="title">Fábio G.</h5>
+    <MapContainer center={position} zoom={7} scrollWheelZoom={true} maxZoom={10} className="leaflet-container" >
       <Networks />
       <Stations />
     </MapContainer>
