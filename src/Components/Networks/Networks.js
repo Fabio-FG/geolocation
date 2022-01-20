@@ -1,7 +1,7 @@
 import { Marker, Popup } from "react-leaflet";
 
 function Networks({ networks, setNetworkId }) {
-  //if networks doesnt work
+  //safeguard in case there is no available networks
   if (!networks) {
     return <p>Something went wrong</p>;
   }
@@ -12,7 +12,6 @@ function Networks({ networks, setNetworkId }) {
 
   return (
     <div>
-      
       {networks.map((network) => {
         return (
           //Marker positions are dynamic and according to the data location of latitude and longitude.

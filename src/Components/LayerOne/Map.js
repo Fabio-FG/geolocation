@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { TileLayer, Marker, Popup, MapContainer } from "react-leaflet";
-import L from "leaflet";
+import { TileLayer, MapContainer } from "react-leaflet";
+
 import "./Map.css";
 import MarkerClusterGroup from "react-leaflet-markercluster";
 import Networks from "../Networks/Networks";
@@ -64,7 +64,9 @@ function Map() {
 
   return (
     <div>
-      <button onClick={() => goBack()} className="back-btn">Back to Networks</button>
+    <div className="wrapper">
+
+      <button onClick={() => goBack(setShowStations)} className="back-btn">Back to Networks</button>
       <MapContainer
         center={position}
         zoom={7}
@@ -83,6 +85,7 @@ function Map() {
           {showStations && <Stations stations={stations} />}
         </MarkerClusterGroup>
       </MapContainer>
+    </div>
     </div>
   );
 }
