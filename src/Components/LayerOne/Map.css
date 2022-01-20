@@ -1,3 +1,18 @@
 .markercluster-map {
   height: 90vh;
 }
+
+.leaflet-container{
+  margin-top: 1%;
+}
+
+.back-btn{
+  display: flex;
+  margin-right: 15%;
+  text-align: center;
+  margin-left: auto;
+  background-color:lightgreen;
+  padding: 8px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
