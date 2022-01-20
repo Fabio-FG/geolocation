@@ -1,6 +1,11 @@
 import { Marker, Popup } from "react-leaflet";
 
-function Networks({ networks, setNetworkId }) {
+function Networks({
+  networks,
+  setNetworkId,
+  setShowStations,
+  setShowNetworks,
+}) {
   //safeguard in case there is no available networks
   if (!networks) {
     return <p>Something went wrong</p>;
@@ -32,7 +37,13 @@ function Networks({ networks, setNetworkId }) {
                 <h3>Network: {network.name}</h3>
               </div>
 
-              <button onClick={() => setNetworkId(network.id)}>
+              <button
+                onClick={() => {
+                  setNetworkId(network.id);
+                  setShowStations(true);
+                  setShowNetworks(false);
+                }}
+              >
                 Check Stations
               </button>
             </Popup>

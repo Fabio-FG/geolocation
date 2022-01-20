@@ -25,18 +25,13 @@ function Map() {
   const [showNetworks, setShowNetworks] = useState(false);
   const [showStations, setShowStations] = useState(false);
 
-  //function to go back - > change it to a useEffect to re-render to the previous state
-  const goBack = () => {
-    setShowNetworks(true);
-    setShowStations(!stations);
-  };
+  
 
   //hook to render the networks
   useEffect(() => {
     const fetchNetworks = async () => {
       const response = await axios.get(`${apiURL}`);
       const networkData = response.data.networks;
-      console.log("networks", networkData);
       setNetworks(networkData);
       setShowNetworks(true);
     };
@@ -52,7 +47,6 @@ function Map() {
       const fetchStation = async () => {
         const response = await axios.get(`${apiURL}/${networkId}`);
         const stationData = response.data.network.stations;
-        console.log("stations", stationData);
         setShowNetworks(false);
         setShowStations(true);
         setStations(stationData);
@@ -64,28 +58,40 @@ function Map() {
 
   return (
     <div>
-    <div className="wrapper">
-
-      <button onClick={() => goBack(setShowStations)} className="back-btn">Back to Networks</button>
-      <MapContainer
-        center={position}
-        zoom={7}
-        scrollWheelZoom={true}
-        maxZoom={20}
-        className="leaflet-container"
-      >
-        <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
-        <MarkerClusterGroup showCoverageOnHover={true}>
-          {showNetworks && (
-            <Networks networks={networks} setNetworkId={setNetworkId} />
-          )}
-          {showStations && <Stations stations={stations} />}
-        </MarkerClusterGroup>
-      </MapContainer>
-    </div>
+      <div className="wrapper">
+        <button
+          onClick={() => {
+            setShowStations(false);
+            setShowNetworks(true);
+          }}
+          className="back-btn"
+        >
+          Back to Networks
+        </button>
+        <MapContainer
+          center={position}
+          zoom={7}
+          scrollWheelZoom={true}
+          maxZoom={20}
+          className="leaflet-container"
+        >
+          <TileLayer
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
+          <MarkerClusterGroup showCoverageOnHover={true}>
+            {showNetworks && (
+              <Networks
+                networks={networks}
+                setNetworkId={setNetworkId}
+                setShowStations={setShowStations}
+                setShowNetworks={setShowNetworks}
+              />
+            )}
+            {showStations && <Stations stations={stations} />}
+          </MarkerClusterGroup>
+        </MapContainer>
+      </div>
     </div>
   );
 }
