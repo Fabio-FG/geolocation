@@ -1,5 +1,5 @@
 import "./HomePage.css";
-import Map from "../../Components/LayerOne/Map";
+import Map from "../../Components/Map/Map";
 
 
 function HomePage() {
