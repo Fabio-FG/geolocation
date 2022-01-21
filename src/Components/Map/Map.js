@@ -54,6 +54,9 @@ function Map() {
     }
   }, [networkId]);
 
+
+  
+
   return (
     <div>
       <div className="wrapper">
