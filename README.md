@@ -50,7 +50,9 @@ Trello <a href="https://trello.com/b/tYkli5h8/geolocation-api-kanban">Link</a>
 
 ### `Backlog`
 
-Improve UXUI design.
-Improve Network button and details.
-Improve map position and size.
 
+<ul>
+<li>Improve UXUI design.</li>
+<li>Improve Network button and details.</li>
+<li>Improve map position and size.</li>
+</ul>
