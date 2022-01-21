@@ -36,10 +36,12 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ###  `Libraries and tools`
  
 ## Tools
-<p>Leaflet</p>
-<p>Leaflet React</p>
-<p>React-router-dom</p>
-<p>Axios</p>
+<ul>
+<li>Leaflet</li>
+<li>Leaflet React</li>
+<li>React-router-dom</li>
+<li>Axios</li>
+</ul>
 
 ## Planning
 
