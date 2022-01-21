@@ -30,7 +30,7 @@ const refreshPage = () => {
         </label>
         
         <div className="logo">
-        <h1><a href="/" className="my-name" onClick={refreshPage}>WorldBike</a></h1>
+        <h1><a href="/" className="my-name" onClick={refreshPage}>WorldBike🚲</a></h1>
         </div>
 
         <nav className="nav-container">

@@ -23,6 +23,7 @@ html {
   color: white;
   text-transform: uppercase;
   margin-bottom: 2%;
+  font-family: "Oxygen", sans-serif;
   
 }
 
@@ -39,7 +40,7 @@ html {
   margin-top: 8%;
   color: rgb(255, 255, 255);
   border-radius: 4px;
-  text-shadow: 2px  5px 12px black;
+  text-shadow: 2px  2px 10px black;
   
   
 

@@ -24,6 +24,14 @@ function HomePage() {
           cluster together according to the zoom level.
           For more information read the documentation at <a href="https://react-leaflet.js.org/docs/start-introduction/" alt="react-leaflet-doc" className="doc-link">Leaflet-React</a>.
         </p>
+        <br>
+        </br>
+        <h3>How to use World Bike</h3>
+        <p>Using World Bike is simple and straightforward.Just pick the country by scrolling through the map and check the available networks and bike stations. If you want to check other locations just click on the "back to network" button on the top right side and scroll to your new designated spot.</p>
+      </section>
+
+      <section>
+        <h3>Contact Us</h3>
       </section>
     </div>
   );
