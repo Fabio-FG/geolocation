@@ -8,7 +8,7 @@ import Networks from "../Networks/Networks";
 import Stations from "../Stations/Stations";
 
 //API Variable
-const apiURL = "http://api.citybik.es/v2/networks";
+const apiURL = "https://api.citybik.es/v2/networks";
 
 function Map() {
   //Default position of the map - Lisbon coords
