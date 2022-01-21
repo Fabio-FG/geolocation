@@ -45,8 +45,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ## Planning
 
-Trello
-(https://trello.com/b/tYkli5h8/geolocation-api-kanban)
+Trello <a href="https://trello.com/b/tYkli5h8/geolocation-api-kanban">Link</a>
 
 
 ### `Backlog`
