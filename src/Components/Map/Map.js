@@ -60,7 +60,7 @@ function Map() {
   return (
     <div>
       <div className="wrapper">
-        <button
+        {showStations && <button
           onClick={() => {
             setShowStations(false);
             setShowNetworks(true);
@@ -68,7 +68,7 @@ function Map() {
           className="back-btn"
         >
           Back to Networks
-        </button>
+        </button>}
         <MapContainer
           center={position} //set the start position of the map focus
           zoom={7}
