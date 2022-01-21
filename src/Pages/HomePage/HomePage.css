@@ -8,7 +8,6 @@ html {
 }
 
 .second-header {
-  background-color: blue;
   margin-top: 30px;
   height: 450px;
   background-image: url("../../images/biking-minneapolis-stone-arch-bridge-6_PaulVincent.jpg");
@@ -54,4 +53,187 @@ font-weight: 800;
   font-size: 2em;
   margin-bottom: 10px;
   
+}
+
+
+#about{
+    
+    width: 70%;
+    display: flex;
+    margin: auto;
+    margin-top: 4%;
+    font-size: 1.2em;
+    text-align: justify;
+    flex-direction: column;
+}
+
+#about h3{
+    font-size: 1.7em;
+    margin-bottom: 2%;
+}
+
+#about p{
+    line-height: 30px;
+}
+
+.doc-link{
+    color: green;
+    text-decoration: none;
+}
+
+
+@media screen and (max-width: 768px) {
+    .second-header {
+        margin-top: 30px;
+        height: 450px;
+        background-image: url("../../images/biking-minneapolis-stone-arch-bridge-6_PaulVincent.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        filter: opacity(85%);
+      }
+      
+      .title {
+        text-align: center;
+        font-size:2.8em;
+        color: white;
+        margin-top: 13%;
+        text-transform: uppercase;
+        margin-bottom: 4%;
+        
+      }
+      
+      .text-container {
+        width: 80%;
+        display: flex;
+        margin: auto;
+        left: 0;
+        right: 0;
+        justify-content: center;
+        flex-direction: column;
+        padding: 5px;
+        position: absolute;
+        margin-top: 8%;
+        color: rgb(255, 255, 255);
+        border-radius: 4px;
+        text-shadow: 2px  5px 12px black;
+        
+        
+      
+      }
+      
+      .text {
+        text-align: center;
+        width: 100%;
+      font-weight: 800;
+        margin: auto;
+        font-size: 1.7em;
+        margin-bottom: 10px;
+        
+      }
+      
+      
+      #about{
+          
+          width: 70%;
+          display: flex;
+          margin: auto;
+          margin-top: 4%;
+          font-size: 1.2em;
+          text-align: justify;
+          flex-direction: column;
+      }
+      
+      #about h3{
+          font-size: 1.7em;
+          margin-bottom: 2%;
+      }
+      
+      #about p{
+          line-height: 30px;
+      }
+      
+      .doc-link{
+          color: green;
+          text-decoration: none;
+      }
+
+}
+
+@media screen and (max-width: 415px) {
+    .second-header {
+        margin-top: 30px;
+        height: 450px;
+        background-image: url("../../images/biking-minneapolis-stone-arch-bridge-6_PaulVincent.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        filter: opacity(85%);
+      }
+      
+      .title {
+        text-align: center;
+        font-size:2.3em;
+        color: white;
+        text-transform: uppercase;
+        margin-bottom: 2%;
+        
+      }
+      
+      .text-container {
+        width: 90%;
+        display: flex;
+        margin: auto;
+        left: 0;
+        right: 0;
+        justify-content: center;
+        flex-direction: column;
+        padding: 5px;
+        position: absolute;
+        margin-top: 12%;
+        color: rgb(255, 255, 255);
+        border-radius: 4px;
+        text-shadow: 2px  5px 12px black;
+        
+        
+      
+      }
+      
+      .text {
+        text-align: center;
+        width: 100%;
+      font-weight: 800;
+        margin: auto;
+        font-size: 1.5em;
+        margin-top: 16%;
+        margin-bottom: 10px;
+        
+      }
+      
+      
+      #about{
+          
+          width: 80%;
+          display: flex;
+          margin: auto;
+          margin-top: 4%;
+          font-size: 1.2em;
+          text-align: justify;
+          flex-direction: column;
+      }
+      
+      #about h3{
+          font-size: 1.7em;
+          margin-bottom: 2%;
+      }
+      
+      #about p{
+          line-height: 30px;
+      }
+      
+      .doc-link{
+          color: green;
+          text-decoration: none;
+      }
+
 }
