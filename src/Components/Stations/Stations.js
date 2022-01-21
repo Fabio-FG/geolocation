@@ -32,9 +32,9 @@ function Stations({ stations }) {
                 {/* Message when the popup is clicked */}
                 <h3>{station.name}</h3>
               </div>
-              Station Name:{station.name}
+              Station Name: {station.name}
               <br></br>
-              Empty slots:{station.empty_slots}
+              Empty slots: {station.empty_slots}
               <br></br>
               Free Bikes: {station.free_bikes}
               <br></br>
