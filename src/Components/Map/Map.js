@@ -25,8 +25,6 @@ function Map() {
   const [showNetworks, setShowNetworks] = useState(false);
   const [showStations, setShowStations] = useState(false);
 
-  
-
   //hook to render the networks
   useEffect(() => {
     const fetchNetworks = async () => {
@@ -69,13 +67,18 @@ function Map() {
           Back to Networks
         </button>
         <MapContainer
-          center={position}
+          center={position} //set the start position of the map focus
           zoom={7}
-          scrollWheelZoom={true}
+          scrollWheelZoom={true} //allow the user to scroll inside the map
           maxZoom={20}
           className="leaflet-container"
+         
         >
           <TileLayer
+            noWrap={false} //set the map repeat - boolean 
+            maxZoom={20}
+            minZoom={1}
+          
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />

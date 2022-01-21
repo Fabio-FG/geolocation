@@ -1,0 +1,589 @@
+/* Global Variables */
+:root {
+    --main-bg-color: rgb(16, 16, 82);
+    --secondary-bg-color: rgb(34, 32, 32);
+    --main-text-color: rgb(225, 225, 225);
+  }
+  
+  .header {
+    display: flex;
+    background-color: var(--secondary-bg-color);
+    /* backdrop-filter: blur(8.5px);
+    -webkit-backdrop-filter: blur(6.5px); */
+    font-family: 'Oxygen', sans-serif;
+    width: 100%;
+    color: var(--main-text-color);
+    top: 0;
+    flex-direction: row;
+    height: 70px;
+    z-index: 5;
+    position: fixed;
+    text-transform: uppercase;
+  }
+  
+  .my-name {
+    color: white;
+    text-decoration: none;
+    font-family: "General Cinema GCC Letters Font", sans-serif;
+    
+  }
+  
+  .nav-container {
+    flex: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    color: white;
+  }
+  
+  .nav-container a {
+    color: white;
+    font-size: 1.2rem;
+    margin-right: 10%;
+    padding: 0;
+    text-decoration: none;
+    transition-duration: 0.4s;
+    white-space: nowrap;
+  }
+  
+  .nav-container a:hover {
+    transform: scale(1.1);
+    transition-duration: 0.4s;
+  }
+  
+  .logo {
+    color: whitesmoke;
+    flex: 50%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+  
+  .logo h1 {
+    font-size: 2em;
+    margin-left: 4%;
+  }
+  
+  .nav-toggle {
+    display: none;
+  }
+  
+  .nav-toggle-label span {
+    display: none;
+  }
+  
+  /* for tablets , ipad */
+  @media screen and (max-width: 992px) {
+    :root {
+      --main-bg-color: rgb(16, 16, 82);
+      --secondary-bg-color: rgb(34, 32, 32);
+      --main-text-color: rgb(225, 225, 225);
+    }
+  
+    .header {
+      background-color: rgb(34, 32, 32);
+      height: 70px;
+      width: 100%;
+      position: fixed;
+      
+    }
+  
+    .my-name {
+      color: white;
+      text-decoration: none;
+    }
+    .logo {
+      flex: 50%;
+      display: flex;
+      height: 100%;
+      align-items: center;
+      margin: auto;
+    }
+  
+    .logo h1 {
+      margin: auto;
+      font-size: 2em;
+    }
+  
+    .nav-container {
+      background-color: rgb(34, 32, 32);
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 70px;
+      padding-top: 3%;
+      padding-bottom: 5%;
+      position: fixed;
+      border-radius: 0;
+      height: 200px;
+      transform: scale(1, 0);
+      transform-origin: top;
+      transition: opacity 1250ms ease-in;
+      transition: transform 350ms ease-in-out 50ms;
+    }
+  
+    .nav-container a {
+      color: white;
+      font-size: 1.7em;
+      margin-right: 0%;
+      padding: 0;
+      text-decoration: none;
+      transition-duration: 0.4s;
+      opacity: 0;
+    }
+  
+    .nav-toggle:checked ~ nav {
+      transform: scale(1, 1);
+      transition: 0.5s;
+      position: absolute;
+      height: auto;
+      
+    }
+  
+    .nav-toggle:checked ~ nav a {
+      opacity: 1;
+      padding: 20px;
+      transition: opacity 140ms ease-in-out;
+      transition: 0.2s;
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      
+    }
+  
+    .nav-toggle:checked ~ nav a:hover {
+      transition: 0.5s;
+      transform: scale(1);
+      background: var(--main-text-color);
+      color: var(--main-bg-color);
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  
+    .nav-toggle {
+      display: none;
+    }
+  
+    .nav-toggle-label {
+      position: absolute;
+      top: 12%;
+      right: 0;
+      height: 70%;
+      display: flex;
+      align-items: center;
+      background-color: rgb(34, 32, 32);
+      margin-right: 5%;
+    }
+  
+    .nav-toggle-label span,
+    .nav-toggle-label span::before,
+    .nav-toggle-label span::after {
+      display: block;
+      background: white;
+      height: 3px;
+      width: 2em;
+      border-radius: 2px;
+      position: relative;
+    }
+  
+    .nav-toggle-label span::before,
+    .nav-toggle-label span::after {
+      content: "";
+      position: absolute;
+    }
+  
+    .nav-toggle-label span::before {
+      bottom: 8px;
+    }
+  
+    .nav-toggle-label span::after {
+      top: 8px;
+    }
+  }
+  
+  /* for phones */
+  @media screen and (max-width: 768px) {
+    :root {
+      --main-bg-color: rgb(16, 16, 82);
+      --secondary-bg-color: rgb(34, 32, 32);
+      --main-text-color: rgb(225, 225, 225);
+    }
+  
+    .header {
+      background-color: rgb(34, 32, 32);
+      height: 70px;
+      width: 100%;
+      position: fixed;
+    }
+  
+    .my-name {
+      color: white;
+      text-decoration: none;
+    }
+    .logo {
+      flex: 50%;
+      display: flex;
+      height: 100%;
+      align-items: center;
+      margin: auto;
+    }
+  
+    .logo h1 {
+      margin: auto;
+      font-size: 2em;
+    }
+  
+    .nav-container {
+      background-color: rgb(34, 32, 32);
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 70px;
+      padding-top: 3%;
+      padding-bottom: 5%;
+      position: fixed;
+      border-radius: 0;
+      height: 200px;
+      transform: scale(1, 0);
+      transform-origin: top;
+      transition: opacity 1250ms ease-in;
+      transition: transform 350ms ease-in-out 50ms;
+    }
+  
+    .nav-container a {
+      color: white;
+      font-size: 1.7em;
+      margin-right: 0%;
+      padding: 0;
+      text-decoration: none;
+      transition-duration: 0.4s;
+      opacity: 0;
+    }
+  
+    .nav-toggle:checked ~ nav {
+      transform: scale(1, 1);
+      transition: 0.5s;
+      position: absolute;
+      height: auto;
+    }
+  
+    .nav-toggle:checked ~ nav a {
+      opacity: 1;
+      padding: 20px;
+      transition: opacity 140ms ease-in-out;
+      transition: 0.2s;
+      display: flex;
+      width: 100%;
+      justify-content: center;
+    }
+  
+    .nav-toggle:checked ~ nav a:hover {
+      transition: 0.5s;
+      transform: scale(1);
+      background: var(--main-text-color);
+      color: var(--main-bg-color);
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  
+    .nav-toggle {
+      display: none;
+    }
+  
+    .nav-toggle-label {
+      position: absolute;
+      top: 12%;
+      right: 0;
+      height: 70%;
+      display: flex;
+      align-items: center;
+      background-color: rgb(34, 32, 32);
+      margin-right: 5%;
+    }
+  
+    .nav-toggle-label span,
+    .nav-toggle-label span::before,
+    .nav-toggle-label span::after {
+      display: block;
+      background: white;
+      height: 3px;
+      width: 2em;
+      border-radius: 2px;
+      position: relative;
+    }
+  
+    .nav-toggle-label span::before,
+    .nav-toggle-label span::after {
+      content: "";
+      position: absolute;
+    }
+  
+    .nav-toggle-label span::before {
+      bottom: 8px;
+    }
+  
+    .nav-toggle-label span::after {
+      top: 8px;
+    }
+  }
+  
+  /* smaller phones and smaller devices */
+  @media screen and (max-width: 575px) {
+    :root {
+      --main-bg-color: rgb(16, 16, 82);
+      --secondary-bg-color: rgb(34, 32, 32);
+      --main-text-color: rgb(225, 225, 225);
+    }
+  
+    .header {
+      background-color: rgb(34, 32, 32);
+      height: 70px;
+      width: 100%;
+      position: fixed;
+    }
+  
+    .my-name {
+      color: white;
+      text-decoration: none;
+    }
+  
+    .logo {
+      flex: 50%;
+      display: flex;
+      height: 100%;
+      align-items: center;
+      margin: auto;
+    }
+  
+    .logo h1 {
+      margin: auto;
+      font-size: 2em;
+    }
+  
+    .nav-container {
+      background-color: rgb(34, 32, 32);
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 70px;
+      padding-top: 3%;
+      padding-bottom: 5%;
+      position: fixed;
+      border-radius: 0;
+      height: 200px;
+      transform: scale(1, 0);
+      transform-origin: top;
+      transition: opacity 1250ms ease-in;
+      transition: transform 350ms ease-in-out 50ms;
+    }
+  
+    .nav-container a {
+      color: white;
+      font-size: 1.7em;
+      margin-right: 0%;
+      padding: 0;
+      text-decoration: none;
+      transition-duration: 0.4s;
+      opacity: 0;
+    }
+  
+    .nav-toggle:checked ~ nav {
+      transform: scale(1, 1);
+      transition: 0.5s;
+      position: absolute;
+    }
+  
+    .nav-toggle:checked ~ nav a {
+      opacity: 1;
+      padding: 20px;
+      transition: opacity 140ms ease-in-out;
+      transition: 0.2s;
+      display: flex;
+      width: 100%;
+      justify-content: center;
+    }
+  
+    .nav-toggle:checked ~ nav a:hover {
+      transition: 0.5s;
+      transform: scale(1);
+      background: var(--main-text-color);
+      color: var(--main-bg-color);
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  
+    .nav-toggle {
+      display: none;
+    }
+  
+    .nav-toggle-label {
+      position: absolute;
+      top: 12%;
+      right: 0;
+      height: 70%;
+      display: flex;
+      align-items: center;
+      background-color: rgb(34, 32, 32);
+      margin-right: 5%;
+    }
+  
+    .nav-toggle-label span,
+    .nav-toggle-label span::before,
+    .nav-toggle-label span::after {
+      display: block;
+      background: white;
+      height: 3px;
+      width: 2em;
+      border-radius: 2px;
+      position: relative;
+    }
+  
+    .nav-toggle-label span::before,
+    .nav-toggle-label span::after {
+      content: "";
+      position: absolute;
+    }
+  
+    .nav-toggle-label span::before {
+      bottom: 8px;
+    }
+  
+    .nav-toggle-label span::after {
+      top: 8px;
+    }
+  }
+  
+  /* for mac screens */
+  
+  @media screen and (min-width: 1025px) and (max-width: 1280px) {
+    :root {
+      --main-bg-color: rgb(16, 16, 82);
+      --secondary-bg-color: rgb(34, 32, 32);
+      --main-text-color: rgb(225, 225, 225);
+    }
+  
+    .header {
+      background-color: rgb(34, 32, 32);
+      height: 70px;
+      width: 100%;
+      position: fixed;
+    }
+  
+    .my-name {
+      color: white;
+      text-decoration: none;
+    }
+    .logo {
+      flex: 50%;
+      display: flex;
+      height: 100%;
+      align-items: center;
+      margin: auto;
+    }
+  
+    .logo h1 {
+      margin: auto;
+      font-size: 2em;
+    }
+  
+    .nav-container {
+      background-color: rgb(34, 32, 32);
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 70px;
+      padding-top: 3%;
+      padding-bottom: 5%;
+      position: fixed;
+      border-radius: 0;
+      height: 200px;
+      transform: scale(1, 0);
+      transform-origin: top;
+      transition: opacity 1250ms ease-in;
+      transition: transform 350ms ease-in-out 50ms;
+    }
+  
+    .nav-container a {
+      color: white;
+      font-size: 1.7em;
+      margin-right: 0%;
+      padding: 0;
+      text-decoration: none;
+      transition-duration: 0.4s;
+      opacity: 0;
+    }
+  
+    .nav-toggle:checked ~ nav {
+      transform: scale(1, 1);
+      transition: 0.5s;
+      position: absolute;
+      height: auto;
+    }
+  
+    .nav-toggle:checked ~ nav a {
+      opacity: 1;
+      padding: 20px;
+      transition: opacity 140ms ease-in-out;
+      transition: 0.2s;
+      display: flex;
+      width: 100%;
+      justify-content: center;
+    }
+  
+    .nav-toggle:checked ~ nav a:hover {
+      transition: 0.5s;
+      transform: scale(1);
+      background: var(--main-text-color);
+      color: var(--main-bg-color);
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  
+    .nav-toggle {
+      display: none;
+    }
+  
+    .nav-toggle-label {
+      position: absolute;
+      top: 12%;
+      right: 0;
+      height: 70%;
+      display: flex;
+      align-items: center;
+      background-color: rgb(34, 32, 32);
+      margin-right: 5%;
+    }
+  
+    .nav-toggle-label span,
+    .nav-toggle-label span::before,
+    .nav-toggle-label span::after {
+      display: block;
+      background: white;
+      height: 3px;
+      width: 2em;
+      border-radius: 2px;
+      position: relative;
+    }
+  
+    .nav-toggle-label span::before,
+    .nav-toggle-label span::after {
+      content: "";
+      position: absolute;
+    }
+  
+    .nav-toggle-label span::before {
+      bottom: 8px;
+    }
+  
+    .nav-toggle-label span::after {
+      top: 8px;
+    }
+    
+  }
+  
+  
+  

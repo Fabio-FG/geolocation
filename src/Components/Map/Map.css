@@ -1,9 +1,5 @@
-
-
-.wrapper{
-  
+.wrapper {
   position: relative;
-  
 }
 
 
@@ -12,25 +8,28 @@
   height: 90vh;
 }
 
-
-
-.leaflet-container{
+.leaflet-container {
   margin-top: 1%;
   border-radius: 1%;
   position: relative;
   z-index: 1;
+  width: 70vw;
+  height: 70vh;
+  margin: auto;
+  margin-top: 5%;
+ 
 }
 
-
-.back-btn{
+.back-btn {
   display: flex;
   margin-right: 15%;
   text-align: center;
   margin-left: 76.5%;
-  background-color:green;
+  background-color: rgb(108, 173, 108);
   color: white;
   margin-top: 0.5%;
-  padding: 8px;
+  padding: 10px;
+  border-radius: 4px;
   border: hidden;
   margin-bottom: 10px;
   cursor: pointer;
