@@ -5,44 +5,78 @@ body {
   font-family: "Oxygen", sans-serif;
 }
 
+.contact-wrapper {
+  margin: auto;
+  margin-top: 12%;
+  display: flex;
+  width: 60%;
+  align-items: center;
+  max-height: 28vw;
+  border-radius: 4px;
+ 
+}
+
+.contact-links {
+  background-color: rgba(45, 45, 49, 0.692);
+  backdrop-filter: blur(2.5px);
+  -webkit-backdrop-filter: blur(3.5px);
+  flex: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 28vw;
+  margin-bottom: auto;
+  
+}
+
+.icon {
+  margin: 25px;
+  height: 4vw;
+  width: 4vw;
+  filter: invert(85%);
+  transition: 0.3s ease-in-out;
+}
+
+.icon:hover {
+  filter: none;
+}
+
 form {
   background-color: rgba(130, 130, 131, 0.445);
-  backdrop-filter: blur(2.5px);
+  backdrop-filter: blur(1.5px);
   -webkit-backdrop-filter: blur(3.5px);
   font-family: "Oxygen", sans-serif;
   display: flex;
   flex-direction: column;
-  width: 25%;
+  width: 20%;
   margin: auto;
   margin-top: 10%;
   margin-bottom: 10%;
-  padding: 15px;
-  border-radius: 4px;
+  flex: 50%;
+  height: 28vw;
 }
 
-input::placeholder{
-    padding-left: 5px;
+input::placeholder {
+  padding-left: 5px;
 }
 
 form h1 {
   text-align: center;
   color: white;
-  margin-bottom: 6%;
-
+  margin-bottom: 3%;
 }
 
 input {
   margin: auto;
-  margin-bottom: 4%;
+  margin-bottom: 3%;
   border-radius: 3px;
   padding: 8px;
-  width: 80%;
+  width: 70%;
   font-size: 1em;
 }
 
-
 input:focus {
-    outline: none;
+  outline: none;
 }
 
 textarea {
@@ -51,7 +85,7 @@ textarea {
   padding: 8px;
   height: 8vw;
   margin-top: 2%;
-  width: 80%;
+  width: 70%;
   margin-bottom: 5%;
   resize: none;
   overflow: hidden;
@@ -60,7 +94,6 @@ textarea {
 textarea::placeholder {
   font-size: 1.3em;
   padding-left: 5px;
-  
 }
 
 button {
@@ -69,8 +102,9 @@ button {
   display: flex;
   justify-content: center;
   margin: auto;
-  background-color: rgb(100, 172, 100);
+  background-color: rgb(47, 51, 47);
   color: white;
   margin-bottom: 2%;
   border: 2px solid rgb(61, 58, 58);
+  font-size: 1.2em;
 }
