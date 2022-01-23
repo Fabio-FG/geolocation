@@ -46,7 +46,7 @@
 }
 
 .icon:hover {
-  filter: none;
+  filter: invert(52%) sepia(15%) saturate(3401%) hue-rotate(103deg) brightness(86%) contrast(72%);
 }
 
 form {

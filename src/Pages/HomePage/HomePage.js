@@ -16,18 +16,22 @@ function HomePage() {
       </div>
       <Map />
       <section id="about">
+
+
+      <h3>How to use World Bike</h3>
+        <p>Using World Bike is simple and straightforward. Just pick the country by scrolling through the map and check the available networks and bike stations. If you want to check other locations just click on the "back to network" button on the top right side and scroll to your new designated spot.</p>
+
       <h3>About World Bike</h3>
         <p>
           This World Bike app was built using React and Leaflet JS a tool that
-          allows us to render an openstreet map. Leaflet JS uses materials such
+          renders an openstreet map and enables map element manipulation . Leaflet JS uses materials such
           as Markers and Clusters. The networks are displayed worldwide and
           cluster together according to the zoom level.
           For more information read the documentation at <a href="https://react-leaflet.js.org/docs/start-introduction/" alt="react-leaflet-doc" className="doc-link">Leaflet-React</a>.
         </p>
         <br>
         </br>
-        <h3>How to use World Bike</h3>
-        <p>Using World Bike is simple and straightforward.Just pick the country by scrolling through the map and check the available networks and bike stations. If you want to check other locations just click on the "back to network" button on the top right side and scroll to your new designated spot.</p>
+        
       </section>
 
       
