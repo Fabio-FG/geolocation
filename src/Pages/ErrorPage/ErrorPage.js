@@ -1,7 +1,12 @@
+import './ErrorPage.css'
+
+
 function ErrorPage() {
     return (  
-        <div>
+        <div className='error-page'>
             <h2>Error 404 - Page Not found</h2>
+          
+            
         </div>
     );
 }

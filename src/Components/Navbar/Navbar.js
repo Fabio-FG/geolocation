@@ -15,10 +15,8 @@ function Navbar() {
 }, []);
 
 
-//refreshing the page when clicking on the home button in the homepage.
-const refreshPage = () => {
-  window.location.reload();
-}
+
+
 
   return (
     <div className="container">
@@ -31,7 +29,7 @@ const refreshPage = () => {
         </label>
         
         <div className="logo">
-        <h1><Link to="/" className="my-name" onClick={refreshPage}>WorldBike🚲</Link></h1>
+        <h1><Link to="/" className="my-name" >WorldBike🚲</Link></h1>
         </div>
 
         <nav className="nav-container">
