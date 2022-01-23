@@ -1,7 +1,7 @@
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
-import ContactPage from "../../Pages/ContactPage/ContactPage";
+
 
 
 function Navbar() {
@@ -31,7 +31,7 @@ const refreshPage = () => {
         </label>
         
         <div className="logo">
-        <h1><a href="/" className="my-name" onClick={refreshPage}>WorldBike🚲</a></h1>
+        <h1><Link to="/" className="my-name" onClick={refreshPage}>WorldBike🚲</Link></h1>
         </div>
 
         <nav className="nav-container">
