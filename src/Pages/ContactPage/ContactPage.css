@@ -1,0 +1,76 @@
+body {
+  background-image: url("../../images/biking-minneapolis-stone-arch-bridge-6_PaulVincent.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Oxygen", sans-serif;
+}
+
+form {
+  background-color: rgba(130, 130, 131, 0.445);
+  backdrop-filter: blur(2.5px);
+  -webkit-backdrop-filter: blur(3.5px);
+  font-family: "Oxygen", sans-serif;
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  margin: auto;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+input::placeholder{
+    padding-left: 5px;
+}
+
+form h1 {
+  text-align: center;
+  color: white;
+  margin-bottom: 6%;
+
+}
+
+input {
+  margin: auto;
+  margin-bottom: 4%;
+  border-radius: 3px;
+  padding: 8px;
+  width: 80%;
+  font-size: 1em;
+}
+
+
+input:focus {
+    outline: none;
+}
+
+textarea {
+  margin: auto;
+  border-radius: 3px;
+  padding: 8px;
+  height: 8vw;
+  margin-top: 2%;
+  width: 80%;
+  margin-bottom: 5%;
+  resize: none;
+  overflow: hidden;
+}
+
+textarea::placeholder {
+  font-size: 1.3em;
+  padding-left: 5px;
+  
+}
+
+button {
+  width: 7vw;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  background-color: rgb(100, 172, 100);
+  color: white;
+  margin-bottom: 2%;
+  border: 2px solid rgb(61, 58, 58);
+}

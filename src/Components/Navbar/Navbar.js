@@ -1,6 +1,7 @@
 import "./Navbar.css";
-
+import { Link } from "react-router-dom";
 import { useEffect } from "react";
+import ContactPage from "../../Pages/ContactPage/ContactPage";
 
 
 function Navbar() {
@@ -35,7 +36,7 @@ const refreshPage = () => {
 
         <nav className="nav-container">
           <a href="#about">About</a>
-          <a href="#contacts">Contacts</a>
+          <Link to="/contacts">Contacts</Link>
         </nav>
       </header>
     </div>
