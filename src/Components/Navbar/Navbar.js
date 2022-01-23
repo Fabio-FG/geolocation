@@ -6,14 +6,11 @@ import { useEffect } from "react";
 
 function Navbar() {
 
-  //useEffect for the scroll 
-  useEffect(() => { 
-  let url = window.location.href.split("/");
-  let target = url[url.length - 1].toLowerCase();
-  let element = document.getElementById(target);
-  element && element.scrollIntoView({ behavior: "smooth", block: "start" });
-}, []);
-
+ 
+//refreshing the page when clicking on the home button in the homepage.
+const refreshPage = () => {
+  window.scrollTo(0, 0);
+};
 
 
 
@@ -29,7 +26,7 @@ function Navbar() {
         </label>
         
         <div className="logo">
-        <h1><Link to="/" className="my-name" >WorldBike 🚲</Link></h1>
+        <h1><Link to="/" className="my-name" onClick={() => {refreshPage()}}>WorldBike 🚲</Link></h1>
         </div>
 
         <nav className="nav-container">
