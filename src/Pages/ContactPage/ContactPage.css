@@ -104,7 +104,7 @@ textarea::placeholder {
   padding-left: 5px;
 }
 
-button {
+.submit-btn {
   width: 7vw;
   padding: 12px;
   display: flex;

@@ -19,7 +19,7 @@ function ContactPage() {
           <input type="email" placeholder="Email" />
           <textarea placeholder="Your Message" maxlength="350" />
           {/* Add a reCAPTCHA */}
-          <button type="submit">Submit</button>
+          <button type="submit" className="submit-btn">Submit</button>
         </form>
         </div>
         </div>
