@@ -114,4 +114,10 @@ button {
   margin-bottom: 2%;
   border: 2px solid rgb(61, 58, 58);
   font-size: 1.2em;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+button:hover{
+  background-color: rgb(36, 153, 89);
 }
