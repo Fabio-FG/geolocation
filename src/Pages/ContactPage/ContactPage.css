@@ -1,18 +1,25 @@
-body {
+.content-wrapper {
   background-image: url("../../images/biking-minneapolis-stone-arch-bridge-6_PaulVincent.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   font-family: "Oxygen", sans-serif;
+  width: auto;
+  height: 100vh;
+  margin-top: 0;
+  position: relative;
 }
 
 .contact-wrapper {
   margin: auto;
+  left:0;
+  right: 0;
   margin-top: 12%;
   display: flex;
   width: 60%;
   align-items: center;
   max-height: 28vw;
   border-radius: 4px;
+  position: absolute;
  
 }
 

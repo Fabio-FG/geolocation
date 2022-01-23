@@ -5,7 +5,8 @@ import gmailLogo from "../../images/gmail.svg";
 
 function ContactPage() {
   return (
-    <div>
+      <div>
+    <div className="content-wrapper">
       <div className="contact-wrapper">
         <div className="contact-links">
           <img src={githubLogo} alt="github-logo" id="github-logo" className="icon"/>
@@ -20,7 +21,8 @@ function ContactPage() {
           {/* Add a reCAPTCHA */}
           <button type="submit">Submit</button>
         </form>
-      </div>
+        </div>
+        </div>
     </div>
   );
 }
