@@ -26,7 +26,7 @@ const refreshPage = () => {
         </label>
         
         <div className="logo">
-        <h1><Link to="/" className="my-name" onClick={() => {refreshPage()}}>WorldBike 🚲</Link></h1>
+        <h1><Link to="/" className="my-name" onClick={refreshPage}>WorldBike 🚲</Link></h1>
         </div>
 
         <nav className="nav-container">
