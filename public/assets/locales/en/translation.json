@@ -8,7 +8,7 @@
   "How to use World Bike": "How to use World Bike",
   "using-text": "Using World Bike is simple and straightforward. Just pick the country by scrolling through the map and check the available networks and bike stations. If you want to check other locations just click on the 'back to network' button on the top right side and scroll to your new designated spot.",
   "About World Bike": "About World Bike",
-  "about-text": "This World Bike app was built using React and Leaflet JS a tool that renders an openstreet map and enables map element manipulation.Leaflet JS uses materials such as Markers and Clusters. The networks are displayed worldwide and cluster together according to the zoom level. For more information read the documentation at",
+  "about-text": "This World Bike app was built using React and Leaflet JS a tool that renders an openstreet map and enables map element manipulation.Leaflet JS uses materials such as Markers and Clusters. The networks are displayed worldwide and cluster together according to the zoom level. For more information read the documentation at ",
   "Back to Networks": "Back to Networks",
   "Network": "Network",
   "Check Stations": "Check Stations"
