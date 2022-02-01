@@ -11,5 +11,9 @@
   "about-text": "This World Bike app was built using React and Leaflet JS a tool that renders an openstreet map and enables map element manipulation.Leaflet JS uses materials such as Markers and Clusters. The networks are displayed worldwide and cluster together according to the zoom level. For more information read the documentation at ",
   "Back to Networks": "Back to Networks",
   "Network": "Network",
-  "Check Stations": "Check Stations"
+  "Check Stations": "Check Stations",
+  "Station Name": "Station Name",
+  "Empty slots": "Empty slots",
+  "Free Bikes": "Free Bikes",
+  "Last update": "Last update"
 }

@@ -11,5 +11,9 @@
   "about-text": "A aplicação World Bike foi construída com React e Leaflet JS, uma ferramenta que apresenta um mapa openstreet e que permite a manipulaçao dos seus elementos. O Leaflet JS utiliza materiais como marcadores(Markers) e agrupamentos(Clusters). As redes são apresentadas em escala global e agrupadas consoante o nível de zoom utilizado. Para mais informação sobre isto, a documentação pode ser lida em ",
   "Back to Networks": "Voltar para redes",
   "Network": "Rede",
-  "Check Stations": "Ver Estações"
+  "Check Stations": "Ver Estações",
+  "Station Name": "Nome",
+  "Empty slots": "Vagas",
+  "Free Bikes": "Bicicletas disponíveis",
+  "Last update": "Atualizado a "
 }
