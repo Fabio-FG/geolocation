@@ -1,6 +1,10 @@
 import { Marker, Popup } from "react-leaflet";
+import { useTranslation } from "react-i18next";
 
-function Stations({ stations }) {
+
+function Stations({ stations, languages}) {
+  //hook for translations
+  const { t } = useTranslation();
   //safeguard in case there is no available stations
 
   if (!stations) {
@@ -10,6 +14,7 @@ function Stations({ stations }) {
   if (stations === 0) {
     return <p>No Stations available</p>;
   }
+
 
   return (
     <div>

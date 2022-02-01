@@ -1,0 +1,15 @@
+{
+  "welcome_to_react": "Bem-vindo ao React e ao react-i18next",
+  "welcome-message": "Olá",
+  "About": "Sobre",
+  "Contacts": "Contactos",
+  "Pedal with World Bike": "Pedala com o World Bike",
+  "Search": "Encontra redes e estações de bicicletas pelo mundo fora em poucos cliques.",
+  "How to use World Bike": "Como usar o World Bike",
+  "using-text": "Usar o World Bike é simples e claro. Basta escolher um país ao navegar no mapa e verificar as redes e estações de bicicletas disponíveis. Para pesquisar sobre outras localizações basta clicar no botão do canto superior direito com o nome de 'voltar para rede' e utilizar o rato para pesquisar sobre localização pretendida.",
+  "About World Bike": "Sobre o World Bike",
+  "about-text": "A aplicação World Bike foi construída com React e Leaflet JS, uma ferramenta que apresenta um mapa openstreet e que permite a manipulaçao dos seus elementos. O Leaflet JS utiliza materiais como marcadores(Markers) e agrupamentos(Clusters). As redes são apresentadas em escala global e agrupadas consoante o nível de zoom utilizado. Para mais informação sobre isto, a documentação pode ser lida em ",
+  "Back to Networks": "Voltar para redes",
+  "Network": "Rede",
+  "Check Stations": "Ver Estações"
+}

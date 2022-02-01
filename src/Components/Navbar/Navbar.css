@@ -19,6 +19,7 @@
     z-index: 5;
     position: fixed;
     text-transform: uppercase;
+   
   }
   
   .my-name {
@@ -70,6 +71,12 @@
   
   .nav-toggle-label span {
     display: none;
+  }
+
+  .langs{
+    list-style: none;
+    
+    background-color: green;
   }
   
   /* for tablets , ipad */

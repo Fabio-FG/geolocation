@@ -5,14 +5,62 @@ import Footer from "./Components/Footer/Footer";
 import Navbar from "./Components/Navbar/Navbar";
 import ContactPage from "./Pages/ContactPage/ContactPage";
 import ErrorPage from "./Pages/ErrorPage/ErrorPage";
+import { useTranslation } from "react-i18next";
+import i18next from "i18next";
 
 function App() {
+  const { t } = useTranslation();
+
+  const languages = [
+    {
+      code: "pt",
+      name: "Portuguese",
+      codename: "PT",
+      country_code: "pt",
+    },
+
+    {
+      code: "en",
+      name: "English",
+      codename: "EN",
+      country_code: "gb",
+    },
+  ];
+
   return (
     <div>
-      <Navbar />
+      <Navbar languages={languages}/>
+      {/* <div
+        className="container"
+        style={{ marginTop: "8%", marginBottom: "5%" }}
+      >
+        <div
+          className="dropdown"
+          style={{
+            height: "100px",
+          }}
+        >
+          <ul>
+            {languages.map(({ code, name, codename, country_code }) => {
+              return (
+                <li>
+                  <button
+                    onClick={() => {
+                      i18next.changeLanguage(code);
+                    }}
+                  >
+                    {name}
+                  </button>
+                </li>
+              );
+            })}
+          </ul>
+          {t("welcome-message")}
+        </div>
+      </div> */}
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/contacts"  element={<ContactPage/>} />
+        <Route path="/" element={<HomePage languages={languages}/>} />
+        <Route path="/contacts" element={<ContactPage />} />
         <Route path="*" component={<ErrorPage />} />
       </Routes>
       <Footer />

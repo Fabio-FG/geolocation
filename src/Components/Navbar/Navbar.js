@@ -1,10 +1,10 @@
 import "./Navbar.css";
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import i18next from "i18next";
 
 
-
-function Navbar() {
+function Navbar({languages}) {
 
  
 //refreshing the page when clicking on the home button in the homepage.
@@ -12,6 +12,8 @@ const refreshPage = () => {
   window.scrollTo(0, 0);
 };
 
+
+const { t } = useTranslation();
 
 
 
@@ -30,8 +32,23 @@ const refreshPage = () => {
         </div>
 
         <nav className="nav-container">
-          <a href="#about">About</a>
-          <Link to="/contacts">Contacts</Link>
+       
+          <a href="#about">{t("About")}</a>
+          <Link to="/contacts">{t("Contacts")}</Link>
+
+          {languages.map(({ code, name, codename, country_code }) => {
+              return (
+                <li className="langs">
+                  <button
+                    onClick={() => {
+                      i18next.changeLanguage(code);
+                    }}
+                  >
+                    {codename}
+                  </button>
+                </li>
+              );
+            })}
         </nav>
       </header>
     </div>

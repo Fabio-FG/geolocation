@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { TileLayer, MapContainer } from "react-leaflet";
+import { useTranslation } from "react-i18next";
 
 import "./Map.css";
 import MarkerClusterGroup from "react-leaflet-markercluster";
@@ -10,7 +11,7 @@ import Stations from "../Stations/Stations";
 //API Variable
 const apiURL = "https://api.citybik.es/v2/networks";
 
-function Map() {
+function Map({languages}) {
   //Default position of the map - Lisbon coords
   const position = [38.736946, -9.142685];
 
@@ -24,6 +25,9 @@ function Map() {
   //variables to display the networks and stations
   const [showNetworks, setShowNetworks] = useState(false);
   const [showStations, setShowStations] = useState(false);
+
+  //hook to translate the
+  const { t } = useTranslation();
 
   //hook to render the networks
   useEffect(() => {
@@ -54,7 +58,6 @@ function Map() {
     }
   }, [networkId]);
 
-
   
 
   return (
@@ -67,7 +70,7 @@ function Map() {
           }}
           className="back-btn"
         >
-          Back to Networks
+          {t("Back to Networks")}
         </button>}
         <MapContainer
           center={position} //set the start position of the map focus
@@ -92,9 +95,10 @@ function Map() {
                 setNetworkId={setNetworkId}
                 setShowStations={setShowStations}
                 setShowNetworks={setShowNetworks}
+                languages={languages}
               />
             )}
-            {showStations && <Stations stations={stations} />}
+            {showStations && <Stations stations={stations} languages={languages} />}
           </MarkerClusterGroup>
         </MapContainer>
       </div>

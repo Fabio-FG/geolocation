@@ -1,11 +1,16 @@
 import { Marker, Popup } from "react-leaflet";
+import { useTranslation } from "react-i18next";
 
 function Networks({
   networks,
   setNetworkId,
   setShowStations,
   setShowNetworks,
+  languages,
 }) {
+  //translation hook
+  const { t } = useTranslation();
+
   //safeguard in case there is no available networks
   if (!networks) {
     return <p>Something went wrong</p>;
@@ -34,7 +39,7 @@ function Networks({
             >
               <div>
                 {/* Message when the popup is clicked */}
-                <h3>Network: {network.name}</h3>
+                <h3>{t("Network")}: {network.name}</h3>
               </div>
 
               <button
@@ -44,7 +49,7 @@ function Networks({
                   setShowNetworks(false);
                 }}
               >
-                Check Stations
+                {t("Check Stations")}
               </button>
             </Popup>
           </Marker>
