@@ -5,11 +5,11 @@ import Footer from "./Components/Footer/Footer";
 import Navbar from "./Components/Navbar/Navbar";
 import ContactPage from "./Pages/ContactPage/ContactPage";
 import ErrorPage from "./Pages/ErrorPage/ErrorPage";
-import { useTranslation } from "react-i18next";
-import i18next from "i18next";
+
+
 
 function App() {
-  const { t } = useTranslation();
+  
 
   const languages = [
     {
