@@ -73,12 +73,41 @@
     display: none;
   }
 
-  .langs{
-    list-style: none;
+  .language-wrapper{
     
-    background-color: green;
+    height: auto;
+    display: flex;
+    margin-right: 20px;
+    flex-direction: row;
+    justify-content: center;
+    
   }
+
+
+.dropdown-content{
+ 
+ color: white;
+ padding: 5px;
+ margin: 0;
+ 
+}
+
+.dropdown-content li{
+  list-style: none;
+}
+
+
+.language-btn{
+  background-color: transparent;
+  color: white;
+  border: none;
   
+}
+
+
+  
+ 
+
   /* for tablets , ipad */
   @media screen and (max-width: 992px) {
     :root {
