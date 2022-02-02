@@ -12,12 +12,19 @@ function ContactPage() {
   //useState for modal
   const [showMessage, setShowMessage] = useState(false);
 
+  //handles for form
+  const [username, setUsername ] = useState("");
+  const [email, setEmail ] = useState("");
+  const [message, setMessage] = useState("");
+
   //prevent default
 
   function handleSubmit(e) {
     e.preventDefault();
-
     setShowMessage(true)
+    setUsername("")
+    setEmail("")
+    setMessage("")
   }
 
   return (
@@ -64,9 +71,9 @@ function ContactPage() {
           </div>
           <form onSubmit={handleSubmit}>
             <h1>{t("Contact Us")}</h1>
-            <input type="text" placeholder={t("Name")} />
-            <input type="email" placeholder={"Email"} />
-            <textarea placeholder={t("Your Message")} maxlength="350" />
+            <input type="text" placeholder={t("Name")} value={username} onChange={(e)=> setUsername(e.target.value)}/>
+            <input type="email" placeholder={"Email"} value={email} onChange={(e)=> setEmail(e.target.value)}/>
+            <textarea placeholder={t("Your Message")} maxlength="350" value={message} onChange={(e)=> setMessage(e.target.value)}/>
             {/* Add a reCAPTCHA */}
           {showMessage && <div className="message"> Your message was sent</div>}
             <button
