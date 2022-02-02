@@ -5,6 +5,8 @@ import Footer from "./Components/Footer/Footer";
 import Navbar from "./Components/Navbar/Navbar";
 import ContactPage from "./Pages/ContactPage/ContactPage";
 import ErrorPage from "./Pages/ErrorPage/ErrorPage";
+import portugalFlag from "./images/pt.svg"
+import unitedKingdomFlag from "./images/gb.svg"
 
 
 
@@ -17,6 +19,7 @@ function App() {
       name: "Portuguese",
       codename: "PT",
       country_code: "pt",
+      country_flag: `${portugalFlag}`
     },
 
     {
@@ -24,6 +27,7 @@ function App() {
       name: "English",
       codename: "EN",
       country_code: "gb",
+      country_flag: `${unitedKingdomFlag}`
     },
   ];
 
