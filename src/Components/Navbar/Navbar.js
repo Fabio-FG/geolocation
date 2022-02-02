@@ -1,7 +1,8 @@
 import "./Navbar.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import i18next from "i18next";
+
 /* import { useState } from "react"; */
 
 function Navbar({ languages }) {
@@ -11,6 +12,15 @@ function Navbar({ languages }) {
   };
 
   const { t } = useTranslation();
+
+
+  //Location variable
+
+  const location = useLocation();
+
+  const isCurrentURL = (url) => {
+    return location.pathname.toLowerCase() === url.toLowerCase();
+  }
 
   //useState to display languages
  /*  const [showLanguages, setShowLanguages] = useState(true); */
@@ -35,7 +45,9 @@ function Navbar({ languages }) {
         </div>
 
         <nav className="nav-container">
-          <a href="#about">{t("About")}</a>
+          {!isCurrentURL ("/contacts")? <a href="#about">{t("About")}</a> : null}
+
+          {!isCurrentURL ("/")? <Link to="/">{t("Home")}</Link> : null}
           <Link to="/contacts">{t("Contacts")}</Link>
 
           <div className="language-wrapper">

@@ -96,13 +96,14 @@
   background-color: transparent;
   color: white;
   border: none;
-  transition: 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
   margin: 5px;
 }
 
 .language-btn:hover {
   cursor: pointer;
   transform: scale(1.2);
+  
 }
 
 .country-flag{

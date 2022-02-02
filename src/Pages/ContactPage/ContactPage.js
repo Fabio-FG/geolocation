@@ -14,9 +14,9 @@ function ContactPage() {
     <div className="content-wrapper">
       <div className="contact-wrapper">
         <div className="contact-links">
-          <img src={githubLogo} alt="github-logo" id="github-logo" className="icon"/>
-          <img src={linkedinLogo} alt="linkedin-logo" id="linkedin-logo" className="icon"/>
-          <img src={gmailLogo} alt="gmail-logo" id="gmail-logo" className="icon"/>
+          <a href="https://fabio-fg.github.io/" target="_blank" rel="noreferrer"><img src={githubLogo} alt="github-logo" id="github-logo" className="icon"/></a>
+          <a href="https://www.linkedin.com/in/fabiofguerreiro/" target="_blank" rel="noreferrer"><img src={linkedinLogo} alt="linkedin-logo" id="linkedin-logo" className="icon"/></a>
+          <a href="mailto:fabio.fernando.guerreiro@gmail.com" target="_blank" rel="noreferrer"><img src={gmailLogo} alt="gmail-logo" id="gmail-logo" className="icon"/></a>
         </div>
         <form>
           <h1>{t("Contact Us")}</h1>
