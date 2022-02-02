@@ -34,6 +34,8 @@ const { t } = useTranslation();
               href="https://react-leaflet.js.org/docs/start-introduction/"
               alt="react-leaflet-doc"
               className="doc-link"
+              target="_blank"
+              rel="noreferrer"
             >
               Leaflet-React
             </a>
