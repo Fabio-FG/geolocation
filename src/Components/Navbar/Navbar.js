@@ -55,16 +55,16 @@ function Navbar({ languages }) {
               languages.map(({ code, name, codename, country_code, country_flag }) => {
                 return (
                   
-                  <ul className="dropdown-content">
-                    <li className="langs">
+                  <ul className="dropdown-content" key={country_code}>
+                    <li className="langs" key={country_code}>
                       <button
                         onClick={() => {
                           i18next.changeLanguage(code);
                         }}
                         className="language-btn"
-                        
+                        key={country_code}
                       >
-                        <img src={country_flag} alt="country-flag" key={code} className="country-flag"></img>
+                        <img src={country_flag} alt="country-flag" key={country_code} className="country-flag"></img>
                       </button>
                     </li>
                   </ul>
