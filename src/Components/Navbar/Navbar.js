@@ -14,7 +14,7 @@ function Navbar({ languages }) {
   const { t } = useTranslation();
 
 
-  //Location variable
+  //Location variable - to show certain options if conditions are met.
 
   const location = useLocation();
 

@@ -34,34 +34,7 @@ function App() {
   return (
     <div>
       <Navbar languages={languages}/>
-      {/* <div
-        className="container"
-        style={{ marginTop: "8%", marginBottom: "5%" }}
-      >
-        <div
-          className="dropdown"
-          style={{
-            height: "100px",
-          }}
-        >
-          <ul>
-            {languages.map(({ code, name, codename, country_code }) => {
-              return (
-                <li>
-                  <button
-                    onClick={() => {
-                      i18next.changeLanguage(code);
-                    }}
-                  >
-                    {name}
-                  </button>
-                </li>
-              );
-            })}
-          </ul>
-          {t("welcome-message")}
-        </div>
-      </div> */}
+      
       <Routes>
         <Route path="/" element={<HomePage languages={languages}/>} />
         <Route path="/contacts" element={<ContactPage />} />
